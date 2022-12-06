@@ -18,24 +18,17 @@ apiVersion: v2
 appVersion: "1.0"
 description: DZ-BI-HELM
 name: dz-bi-helm
-icon: https://datazip.io/static/media/dzip-logo-black.dcc19b8e.svg
-home: https://datazip.io/
-keywords:
-  - business intelligence
-  - data science
-sources:
-  - https://github.com/apache/superset
 maintainers:
   - name: shubham
     email: shubham@datazip.io
     url: https://github.com/shubham19may
 version: 0.7.4
 dependencies:
-  - name: postgresql
-    version: 11.1.22
-    repository: https://charts.bitnami.com/bitnami
-    condition: postgresql.enabled
-  - name: redis
-    version: 16.3.1
-    repository: https://charts.bitnami.com/bitnami
-    condition: redis.enabled
+- name: postgresql
+  version: 11.1.22
+  repository: https://charts.bitnami.com/bitnami
+  condition: postgresql.enabled
+- name: redis
+  version: 16.3.1
+  repository: https://charts.bitnami.com/bitnami
+  condition: redis.enabled
