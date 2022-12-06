@@ -22,7 +22,7 @@ maintainers:
   - name: shubham
     email: shubham@datazip.io
     url: https://github.com/shubham19may
-version: 0.7.4
+version: 0.7.5
 dependencies:
 - name: postgresql
   version: 11.1.22

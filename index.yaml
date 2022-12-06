@@ -3,7 +3,7 @@ entries:
   dz-bi-helm:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2022-12-06T18:26:11.095244+05:30"
+    created: "2022-12-06T18:37:16.828881+05:30"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -26,7 +26,29 @@ entries:
   superset:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2022-12-06T18:26:11.103817+05:30"
+    created: "2022-12-06T18:37:16.845033+05:30"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.1.22
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.3.1
+    description: DZ-BI-HELM
+    digest: de5eb6acc99b45b4d525e7b1a1c92b034245809dad80bea83315d58d99bedad0
+    maintainers:
+    - email: shubham@datazip.io
+      name: shubham
+      url: https://github.com/shubham19may
+    name: superset
+    urls:
+    - https://datazip.github.io/dz-bi-helm/superset-0.7.5.tgz
+    version: 0.7.5
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2022-12-06T18:37:16.83715+05:30"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -46,4 +68,4 @@ entries:
     urls:
     - https://datazip.github.io/dz-bi-helm/superset-0.7.4.tgz
     version: 0.7.4
-generated: "2022-12-06T18:26:11.085592+05:30"
+generated: "2022-12-06T18:37:16.820373+05:30"
