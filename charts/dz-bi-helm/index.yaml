@@ -1,0 +1,101 @@
+apiVersion: v1
+entries:
+  dz-bi-helm:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2022-12-06T16:02:47.725714+05:30"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.1.22
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.3.1
+    description: DZ-BI-HELM
+    digest: 0004626f53dc803c9c2a11a40be48176c8e95f0ab6df8c5132caaec7a4b36832
+    home: https://datazip.io/
+    icon: https://datazip.io/static/media/dzip-logo-black.dcc19b8e.svg
+    keywords:
+    - business intelligence
+    - data science
+    maintainers:
+    - email: shubham@datazip.io
+      name: shubham
+      url: https://github.com/shubham19may
+    name: dz-bi-helm
+    sources:
+    - https://github.com/apache/superset
+    urls:
+    - https://datazip.github.io/dz-bi-helm/dz-bi-helm-0.7.4.tgz
+    version: 0.7.4
+  postgresql:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 14.2.0
+    created: "2022-12-06T16:02:47.728935+05:30"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    description: PostgreSQL (Postgres) is an open source object-relational database
+      known for reliability and data integrity. ACID-compliant, it supports foreign
+      keys, joins, views, triggers and stored procedures.
+    digest: be29cb8d8d17a940f7cab65293d9ca9be483d146da44db3e45ebdbb123350bad
+    home: https://github.com/bitnami/charts/tree/master/bitnami/postgresql
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+    keywords:
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: postgresql
+    sources:
+    - https://github.com/bitnami/bitnami-docker-postgresql
+    - https://www.postgresql.org/
+    urls:
+    - https://datazip.github.io/dz-bi-helm/charts/postgresql-11.1.22.tgz
+    version: 11.1.22
+  redis:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 6.2.6
+    created: "2022-12-06T16:02:47.73239+05:30"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Redis(TM) is an open source, advanced key-value store. It is often
+      referred to as a data structure server since keys can contain strings, hashes,
+      lists, sets and sorted sets.
+    digest: 83fe135c3f3364aecbfe4342f1a27ea0620916bd4568e52b615f155cf75a55eb
+    home: https://github.com/bitnami/charts/tree/master/bitnami/redis
+    icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+    keywords:
+    - redis
+    - keyvalue
+    - database
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: redis
+    sources:
+    - https://github.com/bitnami/bitnami-docker-redis
+    urls:
+    - https://datazip.github.io/dz-bi-helm/charts/redis-16.3.1.tgz
+    version: 16.3.1
+generated: "2022-12-06T16:02:47.716198+05:30"
